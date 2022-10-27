@@ -137,7 +137,9 @@ equate.addEventListener("click", () => {
     console.log(screen_arr)
     console.log(exprss)
     answer.textContent = calculation(exprss)
-    console.log(answer.textContent)
+    screen_el.textContent = ""
+    screen_arr = answer.textContent
+    console.log(screen_arr)
 })
 document.querySelector(".clr").addEventListener("click", () => {
     screen_el.textContent = ""
