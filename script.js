@@ -50,7 +50,7 @@ function conversion(expression_string) {
     let infix_list = expression_string.split(" ")
 
     for (let el in infix_list) {
-        if (infix_list[el].match(/^[0-9]*$/)) {
+        if (infix_list[el].match(/^[0-9.]*$/)) {
             postfix_list.push(infix_list[el])
         } else if (infix_list[el] === "(") {
             operators.push(infix_list[el])
@@ -86,7 +86,7 @@ function calculation(postfix_string) {
     let token_list = postfix_string.split(" ").filter(item => item)
 
     for (let ch in token_list) {
-        if (token_list[ch].match(/^[0-9]*$/)) {
+        if (token_list[ch].match(/^[0-9.]*$/)) {
             operand_list.push(token_list[ch])
             if (operand_list[length - 1] === " ") {
                 operand_list.slice(0, operand_list.length - 2)
